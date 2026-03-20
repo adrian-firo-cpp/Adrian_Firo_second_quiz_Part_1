@@ -1,4 +1,5 @@
 #include <string.h>
+#include <math.h>
 #include "employee.h"
 //NOTE: 5 functions have been defined below 
 //ptr - points to table to be searched
@@ -43,4 +44,16 @@ static int compareEmployeePhone(const void *targetPtr, PtrToConstEmployee tableV
 {
     // Cast targetPtr to char* and compare with employee phone
     return strcmp((char *)targetPtr, tableValuePtr->phone);
+}
+
+// Compare employee salary
+static int compareEmployeeSalary(const void *targetPtr, PtrToConstEmployee tableValuePtr)
+{
+    double targetSalary = *(double *)targetPtr;
+
+    //use tolerance for floating point comparison
+    if (fabs(tableValuePtr->salary - targetSalary) < 0.001)
+        return 0;  //match
+
+    return 1;  //match
 }
