@@ -1,6 +1,6 @@
 #include <string.h>
 #include <math.h>
-#include "employee.h"
+#include "Employee.h"
 //NOTE: 5 functions have been defined below 
 //ptr - points to table to be searched
 //tableSize - size of the table
@@ -18,7 +18,6 @@ static PtrToEmployee searchEmployeeTable(PtrToConstEmployee ptr, int tableSize, 
             return (PtrToEmployee) ptr;
     return NULL;
 }
-//The functionPtr will point to one of these comparison functions to perform a check
 static int compareEmployeeNumber(const void *targetPtr, PtrToConstEmployee tableValuePtr)
 {
     return * (long *) targetPtr != tableValuePtr->number; //const void *targetPtr ==> typecast as int pointer then deference
