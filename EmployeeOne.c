@@ -32,12 +32,17 @@ PtrToEmployee searchEmployeeByName(PtrToConstEmployee ptr, int tableSize, char *
 
 //new search functions
 PtrToEmployee searchEmployeeByPhone(PtrToConstEmployee ptr, int tableSize, const char *targetPhone) {
+    const PtrToConstEmployee endPtr = ptr + tableSize;
+
     //loop through the table
+    for (; ptr < endPtr; ptr++) {
 
-        //compare phone strings
-        //return pointer if match
+        if (strcmp(ptr->phone, targetPhone) == 0) { //compare phone strings
+            return (PtrToEmployee)ptr; //return pointer if match
+        }
+    }
 
-        //no match found
+       return NULL; //no match found
 }
 PtrToEmployee searchEmployeeBySalary(PtrToConstEmployee ptr, int tableSize, float targetSalary); {
     //loop through the table
