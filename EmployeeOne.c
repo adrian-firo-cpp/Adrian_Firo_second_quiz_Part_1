@@ -1,4 +1,5 @@
 #include <string.h>
+#include <math.h>
 #include "employee.h"
 
 // Search by employee number
@@ -46,14 +47,16 @@ PtrToEmployee searchEmployeeByPhone(PtrToConstEmployee ptr, int tableSize, const
 }
 
 //search by employee salary
-PtrToEmployee searchEmployeeBySalary(PtrToConstEmployee ptr, int tableSize, float targetSalary) {
+PtrToEmployee searchEmployeeBySalary(PtrToConstEmployee ptr, int tableSize, double targetSalary) {
     const PtrToConstEmployee endPtr = ptr + tableSize;
 
     for (; ptr < endPtr; ptr++) {
-        if (ptr->salary == targetSalary) {  //compare salaries
-            return (PtrToEmployee)ptr; //return pointer if match
+
+        // compare with tolerance
+        if (fabs(ptr->salary - targetSalary) < 0.001) {
+            return (PtrToEmployee)ptr;
         }
     }
 
-    return NULL; //no match
+    return NULL;
 }
