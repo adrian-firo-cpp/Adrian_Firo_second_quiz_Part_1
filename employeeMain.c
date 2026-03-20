@@ -23,41 +23,53 @@ int main(void){
 
     //search by number
 
-    matchPtr = searchEmployeeByNumber(EmployeeTable, EmployeeTableEntries, 4011);
-
     //Example found
+    matchPtr = searchEmployeeByNumber(EmployeeTable, EmployeeTableEntries, 4011);
     if (matchPtr != NULL)
         printf("Employee ID 4011 is in record %d\n", matchPtr - EmployeeTable);
     else
         printf("Employee ID is NOT found in the record\n");
 
     //example not found
+    matchPtr = searchEmployeeByNumber(EmployeeTable, EmployeeTableEntries, 1234);
+    if (matchPtr != NULL)
+        printf("Employee ID 1234 is in record %d\n", matchPtr - EmployeeTable);
+    else
+        printf("Employee ID is NOT found in the record\n");
 
 
     //search by name
 
-    matchPtr = searchEmployeeByName(EmployeeTable, EmployeeTableEntries, "Tony Bobcat");
-
     //Example found
+    matchPtr = searchEmployeeByName(EmployeeTable, EmployeeTableEntries, "Tony Bobcat");
     if (matchPtr != NULL)
         printf("Employee Tony Bobcat is in record %d\n", matchPtr - EmployeeTable);
     else
         printf("Employee Tony Bobcat is NOT found in the record\n");
 
     //example not found
+    matchPtr = searchEmployeeByName(EmployeeTable, EmployeeTableEntries, "Bob Ross");
+    if (matchPtr != NULL)
+        printf("Employee Bob Ross is in record %d\n", matchPtr - EmployeeTable);
+    else
+        printf("Employee Bob Ross is NOT found in the record\n");
 
 
     //search by phone
 
-    matchPtr = searchEmployeeByPhone(EmployeeTable, EmployeeTableEntries, "909-555-1235");
-
     //example found
+    matchPtr = searchEmployeeByPhone(EmployeeTable, EmployeeTableEntries, "909-555-1235");
     if (matchPtr != NULL)
         printf("Employee with phone 909-555-1235 is in record %ld\n", matchPtr - EmployeeTable);
     else
         printf("Phone 909-555-1235 is NOT found in the record\n");
 
     //example not found
+    matchPtr = searchEmployeeByPhone(EmployeeTable, EmployeeTableEntries, "626-626-6262");
+    if (matchPtr != NULL)
+        printf("Employee with phone 626-626-6262 is in record %ld\n", matchPtr - EmployeeTable);
+    else
+        printf("Phone 626-626-6262 is NOT found in the record\n");
 
 
     //search by salary

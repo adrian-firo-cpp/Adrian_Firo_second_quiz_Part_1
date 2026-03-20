@@ -49,13 +49,11 @@ PtrToEmployee searchEmployeeByPhone(PtrToConstEmployee ptr, int tableSize, const
 PtrToEmployee searchEmployeeBySalary(PtrToConstEmployee ptr, int tableSize, float targetSalary) {
     const PtrToConstEmployee endPtr = ptr + tableSize;
 
-    //loop through the table
     for (; ptr < endPtr; ptr++) {
-
-        if (strcmp(ptr->phone, targetSalary) == 0) { //compare salary 
-            return(PtrToEmployee)ptr; //return pointer if match found
+        if (ptr->salary == targetSalary) {  //compare salaries
+            return (PtrToEmployee)ptr; //return pointer if match
         }
     }
 
-        return NULL; //no match
+    return NULL; //no match
 }
