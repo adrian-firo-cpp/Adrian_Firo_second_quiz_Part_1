@@ -30,7 +30,7 @@ PtrToEmployee searchEmployeeByName(PtrToConstEmployee ptr, int tableSize, char *
     return NULL;  // no match found
 }
 
-//new search functions
+//search by employee phone number
 PtrToEmployee searchEmployeeByPhone(PtrToConstEmployee ptr, int tableSize, const char *targetPhone) {
     const PtrToConstEmployee endPtr = ptr + tableSize;
 
@@ -44,7 +44,9 @@ PtrToEmployee searchEmployeeByPhone(PtrToConstEmployee ptr, int tableSize, const
 
        return NULL; //no match found
 }
-PtrToEmployee searchEmployeeBySalary(PtrToConstEmployee ptr, int tableSize, float targetSalary); {
+
+//search by employee salary
+PtrToEmployee searchEmployeeBySalary(PtrToConstEmployee ptr, int tableSize, float targetSalary) {
     const PtrToConstEmployee endPtr = ptr + tableSize;
 
     //loop through the table
