@@ -2,7 +2,7 @@
 #include <math.h>
 #include "employee.h"
 
-// Search by employee number
+// Search by employee number 
 PtrToEmployee searchEmployeeByNumber(PtrToConstEmployee ptr, int tableSize, long targetNumber) {
     const PtrToConstEmployee endPtr = ptr + tableSize;
 
