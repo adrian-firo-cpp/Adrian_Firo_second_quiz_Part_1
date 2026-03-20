@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "employee.h"
+#include "Employee.h"
 int main(void){
     //defined in employeeOne.c
     PtrToEmployee searchEmployeeByNumber(const Employee Table[], int sizeTable, long numberToFind);
