@@ -1,6 +1,6 @@
 #include <string.h>
 #include "employee.h"
-//NOTE: 5 functions have been defined below
+//NOTE: 5 functions have been defined below 
 //ptr - points to table to be searched
 //tableSize - size of the table
 //targetPtr - points to a comparison function below and will perform the associated check
