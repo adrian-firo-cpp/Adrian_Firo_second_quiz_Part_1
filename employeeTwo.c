@@ -8,7 +8,7 @@
 
 //What does setting a function to static do??
 //functionPtr is the address of the function just use the name
-//()(The second set of parantheses is the arguments of the function call)
+//()(The second set of parantheses is the arguments of the function call) 
 static PtrToEmployee searchEmployeeTable(PtrToConstEmployee ptr, int tableSize, const void *targetPtr, 
     int (*functionPtr)(const void *, PtrToConstEmployee))
 {
