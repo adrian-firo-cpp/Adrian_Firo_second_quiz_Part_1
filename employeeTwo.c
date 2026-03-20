@@ -37,3 +37,10 @@ PtrToEmployee searchEmployeeByName(PtrToConstEmployee ptr, int size, char* name)
 {
     return searchEmployeeTable(ptr, size, name, compareEmployeeName);
 }
+
+// Compare employee phone
+static int compareEmployeePhone(const void *targetPtr, PtrToConstEmployee tableValuePtr)
+{
+    // Cast targetPtr to char* and compare with employee phone
+    return strcmp((char *)targetPtr, tableValuePtr->phone);
+}
