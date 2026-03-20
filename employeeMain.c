@@ -1,8 +1,3 @@
-//Compile using the following command: gcc employeeMain.c employeeTable.c employeeOne.c
-
-//gcc employeeMain.c employeeTable.c employeeTwo.c
-
-
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -75,8 +70,18 @@ int main(void){
     //search by salary
 
     //example found
+    matchPtr = searchEmployeeBySalary(EmployeeTable, EmployeeTableEntries, 6.34);
+    if (matchPtr != NULL)
+        printf("Employee with salary 6.34 is in record %ld\n", matchPtr - EmployeeTable);
+    else
+        printf("Salary 6.34 is NOT found in the record\n");
 
     //example not found
-
+    matchPtr = searchEmployeeBySalary(EmployeeTable, EmployeeTableEntries, 8.01);
+    if (matchPtr != NULL)
+        printf("Employee with salary 8.01 is in record %ld\n", matchPtr - EmployeeTable);
+    else
+        printf("Salary 8.01 is NOT found in the record\n");
+    
     return EXIT_SUCCESS;
 }
